@@ -18,7 +18,14 @@ public class SplashActivity extends AppCompatActivity {
 
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setImageResource(R.drawable.radiation);
-        Button start = findViewById(R.id.button2);
+        final Button start = findViewById(R.id.confirm);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                start.setVisibility(View.INVISIBLE);
+                start.setClickable(false);
+            }
+        });
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
