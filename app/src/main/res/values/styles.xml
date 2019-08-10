@@ -5,7 +5,126 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@android:color/black</item>
+    </style>
+
+    <style name="input">
+
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingLeft">24dp</item>
+
+    </style>
+    <style name="input.black">
+
+        <item name="android:background">@drawable/input</item>
+
+    </style>
+    <style name="input.black.text">
+
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorInputText</item>
+        <item name="android:textColorHint">@color/colorInputHint</item>
+
+    </style>
+    <style name="inputblacktext">
+
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorInputText</item>
+        <item name="android:textColorHint">@color/colorInputHint</item>
+
+    </style>
+    <style name="input.white">
+
+        <item name="android:background">@drawable/input_white</item>
+
+    </style>
+    <style name="RoundedCornerButton">
+        <item name="background">@drawable/background</item>
+    </style>
+    <style name="input.white.text">
+
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/colorInputWhiteHint</item>
+
+    </style>
+    <style name="input.white.text.rounded">
+
+        <item name="android:background">@drawable/input_white_rounded</item>
+
+    </style>
+    <style name="inputwhitetext">
+
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/colorInputWhiteHint</item>
+
+    </style>
+    <style name="confInput">
+
+        <item name="android:textCursorDrawable">@null</item>
+
+    </style>
+    <style name="button.white">
+
+        <item name="android:background">@drawable/button_white</item>
+
+    </style>
+    <style name="button.white.blackText">
+
+        <item name="android:textColor">@android:color/black</item>
+
+    </style>
+    <style name="button.white.gradientText">
+
+        <item name="android:textColor">@color/colorPrimary</item>
+
+    </style>
+    <style name="button.gradient">
+
+        <item name="android:background">@drawable/button_gradient</item>
+        <item name="android:textColor">@android:color/white</item>
+
+    </style>
+    <style name="regCard">
+
+        <item name="android:shadowColor">@android:color/black</item>
+        <item name="android:shadowRadius">5</item>
+
+    </style>
+    <style name="radiobutton">
+
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+
+    </style>
+    <style name="tabLayout" parent="Widget.Design.TabLayout">
+
+        <item name="tabTextAppearance">@style/tab</item>
+        <item name="android:textColor">@android:color/black </item>
+
+    </style>
+    <style name="tab" parent="TextAppearance.Design.Tab">
+
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+
     </style>
 
 </resources>

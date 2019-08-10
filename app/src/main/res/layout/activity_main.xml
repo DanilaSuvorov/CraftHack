@@ -7,6 +7,20 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:mapbox_cameraTargetLat="41.885"
+        mapbox:mapbox_cameraTargetLng="-87.679"
+        mapbox:mapbox_cameraTilt="60"
+        mapbox:mapbox_cameraZoom="12"
+        mapbox:mapbox_styleUrl="@string/mapbox_style_light"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="61dp">
@@ -18,7 +32,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:text="TextView" />
+            android:text="Радиация" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -39,7 +53,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="9dp"
-            android:text="TextView" />
+            android:text="Здоровье" />
 
         <ProgressBar
             android:id="@+id/progressBar2"
@@ -56,11 +70,13 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/start"
+            style="@style/RoundedCornerButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Start" />
+            android:layout_marginTop="48dp"
+            android:text="Начать"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </LinearLayout>
