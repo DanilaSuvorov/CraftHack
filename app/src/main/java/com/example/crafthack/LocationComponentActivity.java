@@ -51,10 +51,6 @@ public class LocationComponentActivity extends AppCompatActivity implements
                     mapView.setVisibility(View.VISIBLE);
             }
         });
-        mapView = findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
-    }
 
     @Override
     public void onMapReady(@NonNull final MapboxMap mapboxMap) {

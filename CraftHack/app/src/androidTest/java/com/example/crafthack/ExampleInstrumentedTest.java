@@ -24,4 +24,3 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.crafthack", appContext.getPackageName());
     }
 }
-
