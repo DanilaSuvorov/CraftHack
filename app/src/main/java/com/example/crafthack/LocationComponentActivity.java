@@ -42,11 +42,15 @@ public class LocationComponentActivity extends AppCompatActivity implements
 
 // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_main);
-        mapView = findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
-        mapView.setVisibility(View.VISIBLE);
-    }
+        final Button start = findViewById(R.id.confirm);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    start.setVisibility(View.INVISIBLE);
+                    start.setClickable(false);
+                    mapView.setVisibility(View.VISIBLE);
+            }
+        });
 
     @Override
     public void onMapReady(@NonNull final MapboxMap mapboxMap) {
