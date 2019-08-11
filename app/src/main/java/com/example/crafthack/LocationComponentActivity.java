@@ -61,8 +61,8 @@ public class LocationComponentActivity extends AppCompatActivity implements
 // object or in the same activity which contains the mapview.
         Mapbox.getInstance(this, "pk.eyJ1Ijoic3RlcGFuNTAyNCIsImEiOiJjanFkc2R6cXY0OGptM3hvYjN4a3JnZmtiIn0.CnwlXeDFl8x0R0VVxVLQDw");
         setContentView(R.layout.activity_main);
-// This contains the MapView in XML and needs to be called after the access token is configured.
-        final Button start = findViewById(R.id.start);
+
+        final Button start = findViewById(R.id.confirm);
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

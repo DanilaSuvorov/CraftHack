@@ -10,16 +10,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="61dp">
+        android:layout_height="46dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Радиация" />
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:text="Радиация"
+            android:textSize="19sp" />
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -32,20 +33,23 @@
             android:max="100"
             android:progress="20" />
 
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="9dp"
-            android:text="Здоровье" />
+            android:text="Здоровье"
+            android:textSize="19sp" />
 
         <ProgressBar
             android:id="@+id/progressBar2"
@@ -59,33 +63,22 @@
             android:progress="75" />
     </LinearLayout>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
-
-        <Button
-            android:id="@+id/start"
-            android:layout_width="395dp"
-            android:layout_height="92dp"
-            android:text="Начать"
-
-            android:textAllCaps="false"
-            android:layout_gravity="center"/>
+        android:layout_height="638dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
 
         <com.mapbox.mapboxsdk.maps.MapView
             android:id="@+id/mapView"
-            android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            mapbox:layout_constraintBottom_toBottomOf="parent"
-            mapbox:layout_constraintEnd_toEndOf="parent"
-            mapbox:layout_constraintStart_toStartOf="parent"
-            mapbox:layout_constraintTop_toTopOf="parent"
+            android:layout_height="636dp"
+
+            android:visibility="invisible"
             mapbox:mapbox_cameraTargetLat="41.885"
             mapbox:mapbox_cameraTargetLng="-87.679"
             mapbox:mapbox_cameraTilt="60"
             mapbox:mapbox_cameraZoom="12" />
-    </FrameLayout>
+    </LinearLayout>
 
 </LinearLayout>
