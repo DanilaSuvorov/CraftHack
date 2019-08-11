@@ -51,23 +51,25 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
 
         <Button
             android:id="@+id/start"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
+            android:layout_width="395dp"
+            android:layout_height="92dp"
             android:text="Начать"
-            android:textAllCaps="false" />
+
+            android:textAllCaps="false"
+            android:layout_gravity="center"/>
 
         <com.mapbox.mapboxsdk.maps.MapView
             android:id="@+id/mapView"
+            android:visibility="invisible"
             android:layout_width="match_parent"
-            android:layout_height="442dp"
+            android:layout_height="match_parent"
             mapbox:layout_constraintBottom_toBottomOf="parent"
             mapbox:layout_constraintEnd_toEndOf="parent"
             mapbox:layout_constraintStart_toStartOf="parent"
@@ -76,6 +78,6 @@
             mapbox:mapbox_cameraTargetLng="-87.679"
             mapbox:mapbox_cameraTilt="60"
             mapbox:mapbox_cameraZoom="12" />
-    </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

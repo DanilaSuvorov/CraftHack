@@ -3,6 +3,8 @@ import android.os.Bundle;
 
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.mapbox.android.core.permissions.PermissionsListener;
@@ -40,7 +42,15 @@ public class LocationComponentActivity extends AppCompatActivity implements
 
 // This contains the MapView in XML and needs to be called after the access token is configured.
         setContentView(R.layout.activity_main);
-
+        final Button start = findViewById(R.id.start);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    start.setVisibility(View.INVISIBLE);
+                    start.setClickable(false);
+                    mapView.setVisibility(View.VISIBLE);
+            }
+        });
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
@@ -64,6 +74,7 @@ public class LocationComponentActivity extends AppCompatActivity implements
 // Check if permissions are enabled and if not request
         if (PermissionsManager.areLocationPermissionsGranted(this)) {
 
+
 // Get an instance of the component
             LocationComponent locationComponent = mapboxMap.getLocationComponent();
 
@@ -79,6 +90,9 @@ public class LocationComponentActivity extends AppCompatActivity implements
 
 // Set the component's render mode
             locationComponent.setRenderMode(RenderMode.COMPASS);
+
+// Retrieve UserLocation
+            Toast.makeText(getApplicationContext(),locationComponent.getLastKnownLocation()+"",Toast.LENGTH_LONG).show();
         } else {
             permissionsManager = new PermissionsManager(this);
             permissionsManager.requestLocationPermissions(this);
